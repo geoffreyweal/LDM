@@ -11,6 +11,9 @@ This program uses the `ScrapPaper` program that were originally developed by M. 
 
 """
 
+import requests
+from bs4 import BeautifulSoup
+
 headers = requests.utils.default_headers()
 headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
 
