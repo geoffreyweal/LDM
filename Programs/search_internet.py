@@ -55,7 +55,7 @@ def get_data_about_google_scholar_search(URL_ori):
 		print('search_results: '+str(search_results))
 		print('search_results_split: '+str(search_results_split))
 
-	except AttributeError:
+	except (AttributeError, IndexError):
 
 		finished_successfully = True
 		return False, None, None, None
