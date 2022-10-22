@@ -48,12 +48,13 @@ def LDM_Part_1(searches):
 		print('Gathering search data on: '+str(search))
 		sentence = [word.lower() for word in search.split()]
 		URL_input = 'https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q='+'+'.join(sentence)+'&btnG='
-		finished_successfully, page_total_num, page_num, search_results_num = get_data_about_google_scholar_search(URL_input)
-		if not finished_successfully:
-			print("\nOpss! ReCaptcha is probably preventing the code from running.")
-			print("Please wait a minute and then run this program again.")
-			print('Program will now finish')
-			return
+		while True:
+			finished_successfully, page_total_num, page_num, search_results_num = get_data_about_google_scholar_search(URL_input)
+			if not finished_successfully:
+				print("\nOpss! ReCaptcha is probably preventing the code from running.")
+				print('Will wait a minute and then try again')
+				timer(60)
+				print('Will try again\n')
 		URL_inputs.append([search, URL_input, page_total_num, page_num])
 		print(f"Total page number: {page_total_num}")
 		print(f"Total search results: {search_results_num}.\n")
@@ -105,9 +106,7 @@ def LDM_Part_1(searches):
 		else:
 			
 			# 3.3.4: Wait a bit of time as time needed
-			print('Waiting 60 minutes')
-			for _ in trange(60):
-				sleep(1)
+			timer(60)
 
 
 
