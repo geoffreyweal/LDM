@@ -10,6 +10,6 @@ To begin you will first click on the *Open in Colab* button below. This will ope
 
 To be directed to the workbook we will be using, **click on the Google button below**
 
-[![Set up on my Google account](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/GardenGroupUO/Computational_Silver_Nanoparticle_Exercise/blob/main/Notebooks/Part_1.0_Worksheet_Title_Page_own_account.ipynb)
+[![Set up on my Google account](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/geoffreyweal/LDM/blob/main/Notebooks/LDM_Notebook.ipynb)
 
 Have fun!
