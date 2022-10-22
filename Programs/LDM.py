@@ -55,20 +55,21 @@ def LDM(searches):
 	temp_counter = 0
 
 	while True:
-		
 		# Third: Perform as much scrapping as possible before Google prevents this momentarily
-
 		while True:
 
+			# 3.1: Get URL info
 			search, URL_input, page_total_num, page_num = URL_inputs[search_index]
-
 			page_num_up = page_num + 1
-
 			print('Looking at Search: '+str(search)+'; Page: '+str(page_num_up))
 
+			# 3.2: Scrap Google Scholar data.
 			finished_scrap, literature_results = scrap_google_scholar_for_literature(URL_input, page_num_up)
+			title_element, link_url, ref_element = literature_results
 
-			all_literature_results.append(literature_results)
+			# 3.3: Append URL to all_literature_results list if it is not already in the list.
+			if not link_url in all_literature_results:
+				all_literature_results.append(link_url)
 
 			if finished_scrap:
 				URL_inputs[search_index][3] += 1
