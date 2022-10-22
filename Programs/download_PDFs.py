@@ -12,6 +12,10 @@ This program uses the `ScrapPaper` program that were originally developed by M. 
 """
 
 import requests
+from HTMLParser import HTMLParser
+
+headers = requests.utils.default_headers()
+headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
 
 def download_pdf(url, file_name, headers):
     # Send GET request
@@ -22,3 +26,25 @@ def download_pdf(url, file_name, headers):
             f.write(response.content)
     else:
         print(response.status_code)
+
+
+
+def get_pdf_from_acs(input_URL):
+	output_URL = input_URL.replace('full','pdf')
+	return output_URL
+
+def get_pdf_from_rsc(input_URL):
+	output_URL = input_URL.replace('articlehtml','articlepdf')
+	return output_URL
+
+def get_pdf_from_sciencedirect(input_URL):
+
+	page = requests.get(input_URL, headers=headers, timeout=None)
+	soup = BeautifulSoup(page.content, "html.parser")
+
+	soup.find('umsdataelement',{'class':'data'}).text
+
+	soup.find('umsdataelement').text
+
+
+	return 

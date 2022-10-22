@@ -20,9 +20,11 @@ headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0)
 
 try:
 	from LDM.Programs.search_internet   import get_data_about_google_scholar_search, scrap_google_scholar_for_literature
+	from LDM.Programs.download_PDFs import download_pdf
 	from LDM.Programs.auxiliary_methods import wait
 except:
 	from search_internet   import get_data_about_google_scholar_search, scrap_google_scholar_for_literature
+	from download_PDFs import download_pdf
 	from auxiliary_methods import wait
 
 def LDM(searches):
@@ -94,10 +96,13 @@ def LDM(searches):
 
 		# Fourth: While we need to wait for Google to let us scrap, download PDF of literature.
 
-		lit = all_literature_results[0]
+		url = 'https://pubs.rsc.org/en/content/articlepdf/2019/cc/c9cc03321a'
+		file_name = 'test.pdf'
 
-		page = requests.get(lit, headers=headers, timeout=None)
-		soup = BeautifulSoup(page.content, "html.parser")
+		download_pdf(url, file_name, headers)
+
+		#page = requests.get(lit, headers=headers, timeout=None)
+		#soup = BeautifulSoup(page.content, "html.parser")
 
 		print('halt moment')
 		import pdb; pdb.set_trace()
