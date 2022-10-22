@@ -65,11 +65,11 @@ def LDM(searches):
 
 			# 3.2: Scrap Google Scholar data.
 			finished_scrap, literature_results = scrap_google_scholar_for_literature(URL_input, page_num_up)
-			title_element, link_url, ref_element = literature_results
 
 			# 3.3: Append URL to all_literature_results list if it is not already in the list.
-			if not link_url in all_literature_results:
-				all_literature_results.append(link_url)
+			for title_element, link_url, ref_element in literature_results:
+				if not link_url in all_literature_results:
+					all_literature_results.append(link_url)
 
 			if finished_scrap:
 				URL_inputs[search_index][3] += 1
