@@ -11,24 +11,12 @@ This program uses the `ScrapPaper` program that were originally developed by M. 
 
 """
 
-import csv
-
-
-import pandas as pd
-
-import time
-from LDM.Programs.search_internet import get_data_about_google_scholar_search
-
-# ===== DEFINE GENERAL FUNCTIONS =====
-
-search_from, URL_edit= "", ""
-
-def wait():
-	print("Waiting for a few secs...")
-	time.sleep(4)
-	print("Waiting done. Continuing...\n")
-
-# ------------------------------------------
+try:
+	from LDM.Programs.search_internet   import get_data_about_google_scholar_search, scrap_google_scholar_for_literature
+	from LDM.Programs.auxiliary_methods import wait
+except:
+	from search_internet   import get_data_about_google_scholar_search, scrap_google_scholar_for_literature
+	from auxiliary_methods import wait
 
 def LDM(searches):
 	"""
@@ -40,43 +28,69 @@ def LDM(searches):
 		This is a list of all the searches you would like to perform. 
 	"""
 
+	# First: Gathering information about searches to perform
+	print('------------------------------------------------')
+	print('Prelim Step: Gathering data about searches'.upper()+'\n')
 	URL_inputs = []
 	for search in searches:
+		print('Gathering search data on: '+str(search))
 		sentence = [word.lower() for word in search.split()]
 		URL_input = 'https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q='+'+'.join(sentence)+'&btnG='
+		finished_successfully, page_total_num, page_num, search_results_num = get_data_about_google_scholar_search(URL_input)
+		if not finished_successfully:
+			print("\nOpss! ReCaptcha is probably preventing the code from running.")
+			print("Please wait a minute and then run this program again.")
+			print('Program will now finish')
+			return
+		URL_inputs.append([search, URL_input, page_total_num, page_num])
+		print(f"Total page number: {page_total_num}")
+		print(f"Total search results: {search_results_num}.\n")
 
-		page_total_num, page_num = get_data_about_google_scholar_search(URL_input)
-
-		URL_inputs.append([URL_input, page_total_num, page_num])
-
+	# Second: Peform lituerature data mining
+	print('------------------------------------------------')
+	print('Main Step: Literature Data Mining'.upper()+'\n')
 	all_literature_results = []
-
 	search_index = 0
 
-	while True:
+	temp_counter = 0
 
-		# Perform Scrap
+	while True:
+		
+		# Third: Perform as much scrapping as possible before Google prevents this momentarily
+
 		while True:
 
-			URL_input, page_total_num, page_num = URL_inputs[search_index]
+			search, URL_input, page_total_num, page_num = URL_inputs[search_index]
 
 			page_num_up = page_num + 1
 
-			finished_scrap. literature_results = scrap_google_scholar_for_literature(URL_input, page_num_up)
+			print('Looking at Search: '+str(search)+'; Page: '+str(page_num_up))
+
+			finished_scrap, literature_results = scrap_google_scholar_for_literature(URL_input, page_num_up)
 
 			all_literature_results.append(literature_results)
 
 			if finished_scrap:
-
-				URL_inputs[index1][2] += 1
+				URL_inputs[search_index][3] += 1
+			else:
+				break
 
 			search_index += 1
 			if search_index == len(URL_inputs):
 				search_index = 0
 
-		# Perform download
+			temp_counter +=1
+			if temp_counter == 6:
+				import pdb; pdb.set_trace()
+
+		# Fourth: While we need to wait for Google to let us scrap, download PDF of literature.
 
 		# Perform higlighting
+
+		print('halt moment')
+		import pdb; pdb.set_trace()
+
+
 
 
 

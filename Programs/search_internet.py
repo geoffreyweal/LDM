@@ -8,13 +8,21 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-def get_data_about_google_scholar_search(URL_input):
+try:
+	from LDM.Programs.auxiliary_methods import wait
+except:
+	from auxiliary_methods import wait
+
+headers = requests.utils.default_headers()
+headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
+
+def get_data_about_google_scholar_search(URL_ori):
 	"""
 	This method is designe to determine the number of pages of results that were obtained.
 
 	Parameters
 	----------
-	URL_input : str.
+	URL_ori : str.
 		This is the google scholar URL to search.
 
 	Results
@@ -34,32 +42,30 @@ def get_data_about_google_scholar_search(URL_input):
 		soup = BeautifulSoup(page.content, "html.parser")
 		wait()
 		general_search_results = soup.find_all("div", class_="gs_ab_mdw")
-		print(general_search_results)
 		search_results = general_search_results[1].text
 
 		# Third, obtain the general search data, including total number of pages with results.
 		if "About" in search_results:
 			search_results_split = search_results.split("results")[0].split("About")[1]
 		elif "results" in search_results:
-			search_results_split = search_results.split("results")[0]
+			search_results_split = searczh_results.split("results")[0]
 		else:	
 			search_results_split = search_results.split("result")[0]
 
 	except AttributeError:
 
-		print("Opss! ReCaptcha is probably preventing the code from running.")
-		print("Please consider running in another time.\n")
-		return
+		finished_successfully = True
+		return False, None, None, None
 
 	# Fourth, obtain the total number of pages
 	search_results_num = int(''.join(filter(str.isdigit, search_results_split)))
 	page_total_num = int(search_results_num / 10) + 1
-	print(f"Total page number: {page_total_num}")
-	print(f"Total search results: {search_results_num}.\n")
+	#print(f"Total page number: {page_total_num}")
+	#print(f"Total search results: {search_results_num}.\n")
 	wait()
 
 	# Fifth, return the total number of pages
-	return page_total_num, page_num
+	return True, page_total_num, page_num, search_results_num
 
 def scrap_google_scholar_for_literature(URL_ori, page_num):
 	"""
@@ -81,12 +87,9 @@ def scrap_google_scholar_for_literature(URL_ori, page_num):
 	"""
 
 	# First, get the URL page to load
-	print(f"Going to page {page_num_up}.\n")
-	URL_edit = str(URL_ori + "&start=" + str(page_num_up) + "0")
+	URL_edit = str(URL_ori + "&start=" + str(page_num) + "0")
 
 	# Second, load the google scholar page and extract the information from it
-	headers = requests.utils.default_headers()
-	headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
 	page = requests.get(URL_edit, headers=headers, timeout=None)
 	soup = BeautifulSoup(page.content, "html.parser")
 	results = soup.find("div", id="gs_res_ccl_mid")
@@ -102,16 +105,16 @@ def scrap_google_scholar_for_literature(URL_ori, page_num):
 			links = job_element.find("a") 
 			link_url = links["href"]
 			title_element = links.text.strip()
-			print(title_element)
-			print(link_url)
-			print(ref_element)
-			print()
+			#print(title_element)
+			#print(link_url)
+			#print(ref_element)
+			#print()
 			literature_results.append((title_element, link_url, ref_element))
 		finished_scrap = True
 	except AttributeError:
-		print("Opss! ReCaptcha is probably preventing the code from running.")
-		print("Please consider running in another time.\n")
-		break
+		pass
+		#print("Opss! ReCaptcha is probably preventing the code from running.")
+		#print("Please consider running in another time.\n")
 
 	# Fourth, return finished_scrap and literature_results
 	return finished_scrap, literature_results
