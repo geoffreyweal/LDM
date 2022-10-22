@@ -82,7 +82,7 @@ def LDM(searches):
 
 			temp_counter +=1
 			if temp_counter == 6:
-				import pdb; pdb.set_trace()
+				break
 
 		# Fourth: While we need to wait for Google to let us scrap, download PDF of literature.
 
