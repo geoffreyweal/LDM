@@ -11,6 +11,10 @@ This program uses the `ScrapPaper` program that were originally developed by M. 
 
 """
 
+headers = requests.utils.default_headers()
+headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
+
+
 try:
 	from LDM.Programs.search_internet   import get_data_about_google_scholar_search, scrap_google_scholar_for_literature
 	from LDM.Programs.auxiliary_methods import wait
@@ -51,6 +55,7 @@ def LDM(searches):
 	print('Main Step: Literature Data Mining'.upper()+'\n')
 	all_literature_results = []
 	search_index = 0
+	download_and_highlight_start_index = 0
 
 	temp_counter = 0
 
@@ -86,10 +91,20 @@ def LDM(searches):
 
 		# Fourth: While we need to wait for Google to let us scrap, download PDF of literature.
 
-		# Perform higlighting
+		lit = all_literature_results[0]
+
+		page = requests.get(lit, headers=headers, timeout=None)
+		soup = BeautifulSoup(page.content, "html.parser")
 
 		print('halt moment')
 		import pdb; pdb.set_trace()
+
+
+
+
+
+		# Perform higlighting
+
 
 
 
