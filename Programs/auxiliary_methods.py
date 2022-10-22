@@ -6,6 +6,7 @@ This programs contain general methods that are use across the LDM program
 
 import random
 from time import sleep
+from tqdm import trange
 
 def wait():
 	"""

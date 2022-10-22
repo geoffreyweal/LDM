@@ -13,7 +13,6 @@ This program uses the `ScrapPaper` program that were originally developed by M. 
 
 import os
 from time import sleep
-from tqdm import trange
 
 import requests
 from bs4 import BeautifulSoup
