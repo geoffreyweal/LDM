@@ -20,11 +20,11 @@ headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0)
 
 try:
 	from LDM.Programs.search_internet   import get_data_about_google_scholar_search, scrap_google_scholar_for_literature
-	from LDM.Programs.download_PDFs import download_pdf
+	from LDM.Programs.download_PDFs     import download_pdf
 	from LDM.Programs.auxiliary_methods import wait
 except:
 	from search_internet   import get_data_about_google_scholar_search, scrap_google_scholar_for_literature
-	from download_PDFs import download_pdf
+	from download_PDFs     import download_pdf
 	from auxiliary_methods import wait
 
 def LDM(searches):
