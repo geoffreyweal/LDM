@@ -17,17 +17,23 @@ import requests
 headers = requests.utils.default_headers()
 headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
 
-def download_pdf(url, file_name, headers):
-    # Send GET request
-    response = requests.get(url, headers=headers)
-    # Save the PDF
-    if response.status_code == 200:
-        with open(file_name, "wb") as f:
-            f.write(response.content)
-    else:
-        print(response.status_code)
+def download_pdf(search_url, file_name, headers):
+
+	# First, get the pdf URL from the search url
+	download_url = get_pdf_website_from_search_website(search_URL)
 
 
+	# Send GET request
+	response = requests.get(url, headers=headers)
+	# Save the PDF
+	if response.status_code == 200:
+		with open(file_name, "wb") as f:
+			f.write(response.content)
+	else:
+		print(response.status_code)
+
+def get_pdf_website_from_search_website(search_URL):
+	import pdb; pdb.set_rtace()
 
 def get_pdf_from_acs(input_URL):
 	output_URL = input_URL.replace('full','pdf')
@@ -38,6 +44,8 @@ def get_pdf_from_rsc(input_URL):
 	return output_URL
 
 def get_pdf_from_sciencedirect(input_URL):
+
+	import pdb; pdb.set_trace()
 
 	page = requests.get(input_URL, headers=headers, timeout=None)
 	soup = BeautifulSoup(page.content, "html.parser")

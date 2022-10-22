@@ -11,12 +11,14 @@ This program uses the `ScrapPaper` program that were originally developed by M. 
 
 """
 
+from time import sleep
+from tqdm import trange
+
 import requests
 from bs4 import BeautifulSoup
 
 headers = requests.utils.default_headers()
 headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
-
 
 try:
 	from LDM.Programs.search_internet   import get_data_about_google_scholar_search, scrap_google_scholar_for_literature
@@ -27,7 +29,7 @@ except:
 	from download_PDFs     import download_pdf
 	from auxiliary_methods import wait
 
-def LDM(searches):
+def LDM_Part_1(searches):
 	"""
 	This method will perform the tasks needed for literature data mining
 
@@ -65,102 +67,39 @@ def LDM(searches):
 	temp_counter = 0
 
 	while True:
+
 		# Third: Perform as much scrapping as possible before Google prevents this momentarily
-		while True:
 
-			# 3.1: Get URL info
-			search, URL_input, page_total_num, page_num = URL_inputs[search_index]
-			page_num_up = page_num + 1
-			print('Looking at Search: '+str(search)+'; Page: '+str(page_num_up))
+		# 3.1: Get URL info
+		search, URL_input, page_total_num, page_num = URL_inputs[search_index]
+		page_num_up = page_num + 1
+		print('Looking at Search: '+str(search)+'; Page: '+str(page_num_up))
 
-			# 3.2: Scrap Google Scholar data.
-			finished_scrap, literature_results = scrap_google_scholar_for_literature(URL_input, page_num_up)
+		# 3.2: Scrap Google Scholar data.
+		finished_scrap, literature_results = scrap_google_scholar_for_literature(URL_input, page_num_up)
 
-			# 3.3: Append URL to all_literature_results list if it is not already in the list.
+		if finished_scrap:
+
+			# 3.3.1: Append URL to all_literature_results list if it is not already in the list.
 			for title_element, link_url, ref_element in literature_results:
 				if not link_url in all_literature_results:
 					all_literature_results.append(link_url)
+					write
 
-			if finished_scrap:
-				URL_inputs[search_index][3] += 1
-			else:
-				break
+			# 3.3.2: Update the page number to obtain data from
+			URL_inputs[search_index][3] += 1
 
+			# 3.3.3: Update the search index number
 			search_index += 1
 			if search_index == len(URL_inputs):
 				search_index = 0
-
-			temp_counter +=1
-			if temp_counter == 6:
-				break
-
-		# Fourth: While we need to wait for Google to let us scrap, download PDF of literature.
-
-		url = 'https://pubs.rsc.org/en/content/articlepdf/2019/cc/c9cc03321a'
-		file_name = 'test.pdf'
-
-		download_pdf(url, file_name, headers)
-
-		#page = requests.get(lit, headers=headers, timeout=None)
-		#soup = BeautifulSoup(page.content, "html.parser")
-
-		print('halt moment')
-		import pdb; pdb.set_trace()
-
-
-
-
-
-		# Perform higlighting
-
-
-
-
-
-
-'''
-
-	for i in range(page_total_num):
-
-		page_num_up = page_num + i
-
-		scrap_google_scholar_for_literature(URL_input, page_num_up)
-
-
-
-'''
-
-
-
-
-
-
-
-'''
-
-	# SETTING UP THE CSV FILE
-
-	outfile = open("scrapped_gscholar.csv","w",newline='',encoding='utf-8')
-	writer = csv.writer(outfile)
-	df = pd.DataFrame(columns=['Title','Links','References'])
-
-	# SETTING & GETTING PAGE NUMBER
-
-				df2 = pd.DataFrame([[title_element, link_url, ref_element]], columns=['Title','Links','References'])
-				df = pd.concat([df, df2], ignore_index=True)
-
-	print("Saving results.\n")
-	df.index += 1
-	df.to_csv('scrapped_gscholar.csv',encoding='utf-8')
-	outfile.close()
-
-
-
-
-
-'''
-
-
+		
+		else:
+			
+			# 3.3.4: Wait a bit of time as time needed
+			print('Waiting 60 minutes')
+			for _ in trange(60):
+				sleep(1)
 
 
 
