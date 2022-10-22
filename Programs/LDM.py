@@ -11,6 +11,7 @@ This program uses the `ScrapPaper` program that were originally developed by M. 
 
 """
 
+import os
 from time import sleep
 from tqdm import trange
 
@@ -57,6 +58,12 @@ def LDM_Part_1(searches):
 		print(f"Total page number: {page_total_num}")
 		print(f"Total search results: {search_results_num}.\n")
 
+	literature_url_filename = 'literature_urls.txt'
+	if os.path.exists(literature_url_filename):
+		os.remove(literature_url_filename)
+	with open(literature_url_filename,'w') as FILE:
+		pass
+
 	# Second: Peform lituerature data mining
 	print('------------------------------------------------')
 	print('Main Step: Literature Data Mining'.upper()+'\n')
@@ -84,7 +91,8 @@ def LDM_Part_1(searches):
 			for title_element, link_url, ref_element in literature_results:
 				if not link_url in all_literature_results:
 					all_literature_results.append(link_url)
-					write
+					with open(literature_url_filename,'a') as FILE:
+						FILE.write(link_url+'\n')
 
 			# 3.3.2: Update the page number to obtain data from
 			URL_inputs[search_index][3] += 1
