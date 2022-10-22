@@ -18,7 +18,7 @@ import requests
 from bs4 import BeautifulSoup
 
 headers = requests.utils.default_headers()
-headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
+headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0','referer':'https://www.google.com/'})
 
 try:
 	from LDM.Programs.search_internet   import get_data_about_google_scholar_search, scrap_google_scholar_for_literature
@@ -51,7 +51,7 @@ def LDM_Part_1(searches):
 			finished_successfully, page_total_num, page_num, search_results_num = get_data_about_google_scholar_search(URL_input)
 			if not finished_successfully:
 				print("\nOpss! ReCaptcha is probably preventing the code from running.")
-				print('Will wait a minute and then try again')
+				print('Will wait 10 minutes and then try again')
 				timer(60*20)
 				print('Will try again\n')
 			else:
@@ -108,7 +108,7 @@ def LDM_Part_1(searches):
 			
 			# 3.3.4: Wait a bit of time as time needed
 			print("\nOpss! ReCaptcha is probably preventing the code from running.")
-			print('Will wait a minute and then try again')
+			print('Will wait 10 minutes and then try again')
 			timer(60*20)
 			print('Will try again\n')
 

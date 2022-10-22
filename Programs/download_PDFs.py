@@ -15,7 +15,7 @@ import requests
 #from HTMLParser import HTMLParser
 
 headers = requests.utils.default_headers()
-headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
+headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0','referer':'https://www.google.com/'})
 
 def download_pdf(search_url, file_name, headers):
 
