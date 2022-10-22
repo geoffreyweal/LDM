@@ -52,7 +52,8 @@ def get_data_about_google_scholar_search(URL_ori):
 		else:	
 			search_results_split = search_results.split("result")[0]
 
-		print('search_results_split: '+str(search_results))
+		print('search_results: '+str(search_results))
+		print('search_results_split: '+str(search_results_split))
 
 	except AttributeError:
 
