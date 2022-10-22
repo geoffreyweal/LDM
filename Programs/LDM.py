@@ -55,6 +55,8 @@ def LDM_Part_1(searches):
 				print('Will wait a minute and then try again')
 				timer(60)
 				print('Will try again\n')
+			else:
+				break
 		URL_inputs.append([search, URL_input, page_total_num, page_num])
 		print(f"Total page number: {page_total_num}")
 		print(f"Total search results: {search_results_num}.\n")
@@ -106,7 +108,10 @@ def LDM_Part_1(searches):
 		else:
 			
 			# 3.3.4: Wait a bit of time as time needed
+			print("\nOpss! ReCaptcha is probably preventing the code from running.")
+			print('Will wait a minute and then try again')
 			timer(60)
+			print('Will try again\n')
 
 
 

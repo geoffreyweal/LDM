@@ -15,7 +15,7 @@ def wait():
 	sleep(random.randrange(1, 6))
 	#print("Waiting done. Continuing...\n")
 
-def timer():
-	print('Waiting 60 minutes')
-	for _ in trange(60):
+def timer(time_to_wait):
+	print('Waiting '+str(time_to_wait)+' seconds')
+	for _ in trange(time_to_wait):
 		sleep(1)
