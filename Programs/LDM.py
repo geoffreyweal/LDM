@@ -11,14 +11,13 @@ This program uses the `ScrapPaper` program that were originally developed by M. 
 
 """
 
-import requests
 import csv
-import re
-import random
-import time
+
+
 import pandas as pd
-from sys import exit
-from bs4 import BeautifulSoup
+
+import time
+from LDM.Programs.search_internet import get_data_about_google_scholar_search
 
 # ===== DEFINE GENERAL FUNCTIONS =====
 
@@ -26,101 +25,80 @@ search_from, URL_edit= "", ""
 
 def wait():
 	print("Waiting for a few secs...")
-	time.sleep(random.randrange(1, 6))
+	time.sleep(4)
 	print("Waiting done. Continuing...\n")
 
 # ------------------------------------------
 
-URL_input = 'https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=anna+garden&btnG='
+def LDM(searches):
+	"""
+	This method will perform the tasks needed for literature data mining
 
-def get_data_about_google_scholar_search(URL_input)
+	Parameters
+	----------
+	searches : list of str.
+		This is a list of all the searches you would like to perform. 
+	"""
 
-	page_num = 0
-	URL_edit = str(URL_ori + "&start=" + str(page_num))
+	URL_inputs = []
+	for search in searches:
+		sentence = [word.lower() for word in search.split()]
+		URL_input = 'https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q='+'+'.join(sentence)+'&btnG='
 
-	try:
+		page_total_num, page_num = get_data_about_google_scholar_search(URL_input)
 
-		page = requests.get(URL_edit, headers=headers, timeout=None)
-		soup = BeautifulSoup(page.content, "html.parser")
-		wait()
+		URL_inputs.append([URL_input, page_total_num, page_num])
 
-		general_search_results = soup.find_all("div", class_="gs_ab_mdw")
-		print(general_search_results)
+	all_literature_results = []
 
-		search_results = general_search_results[1].text
+	search_index = 0
 
-		if "About" in search_results:
-			search_results_split = search_results.split("results")[0].split("About")[1]
-		elif "results" in search_results:
-			search_results_split = search_results.split("results")[0]
-		else:	
-			search_results_split = search_results.split("result")[0]
+	while True:
 
-	except AttributeError:
+		# Perform Scrap
+		while True:
 
-		print("Opss! ReCaptcha is probably preventing the code from running.")
-		print("Please consider running in another time.\n")
-		return
+			URL_input, page_total_num, page_num = URL_inputs[search_index]
 
-	search_results_num = int(''.join(filter(str.isdigit, search_results_split)))
-	page_total_num = int(search_results_num / 10) + 1
-	print(f"Total page number: {page_total_num}")
-	print(f"Total search results: {search_results_num}.\n")
+			page_num_up = page_num + 1
 
-	wait()
+			finished_scrap. literature_results = scrap_google_scholar_for_literature(URL_input, page_num_up)
 
-	return page_total_num, page_num
+			all_literature_results.append(literature_results)
+
+			if finished_scrap:
+
+				URL_inputs[index1][2] += 1
+
+			search_index += 1
+			if search_index == len(URL_inputs):
+				search_index = 0
+
+		# Perform download
+
+		# Perform higlighting
 
 
 
-def scrap_google_scholar_for_literature(URL_input, page_total_num, page_num):
+'''
 
-	literature_results = []
-
-	page_num = 0
 	for i in range(page_total_num):
 
 		page_num_up = page_num + i
-		print(f"Going to page {page_num_up}.\n")
-		URL_edit = str(URL_ori + "&start=" + str(page_num_up) + "0")
 
-		headers = requests.utils.default_headers()
-		headers.update({'User-Agent': 'Mozilla/15.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20210916 Firefox/95.0'})
-		
-		page = requests.get(URL_edit, headers=headers, timeout=None)
-		soup = BeautifulSoup(page.content, "html.parser")
-		wait()
+		scrap_google_scholar_for_literature(URL_input, page_num_up)
 
-		results = soup.find("div", id="gs_res_ccl_mid")
 
-		try:
 
-			job_elements = results.find_all("div", class_="gs_ri")
-			for job_element in job_elements:
-
-				ref_element = job_element.find("div", class_="gs_a").text
-				links = job_element.find("a") 
-				link_url = links["href"]
-				title_element = links.text.strip()
-
-				print(title_element)
-				print(link_url)
-				print(ref_element)
-				print()
-
-				literature_results.append((title_element, link_url, ref_element))
-
-		except AttributeError:
-			print("Opss! ReCaptcha is probably preventing the code from running.")
-			print("Please consider running in another time.\n")
-			break
-
-	return literature_results
+'''
 
 
 
 
 
+
+
+'''
 
 	# SETTING UP THE CSV FILE
 
@@ -140,4 +118,12 @@ def scrap_google_scholar_for_literature(URL_input, page_total_num, page_num):
 
 
 
-def LDM()
+
+
+'''
+
+
+
+
+
+
