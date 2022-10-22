@@ -52,7 +52,7 @@ def LDM_Part_1(searches):
 			if not finished_successfully:
 				print("\nOpss! ReCaptcha is probably preventing the code from running.")
 				print('Will wait a minute and then try again')
-				timer(60)
+				timer(60*20)
 				print('Will try again\n')
 			else:
 				break
@@ -109,7 +109,7 @@ def LDM_Part_1(searches):
 			# 3.3.4: Wait a bit of time as time needed
 			print("\nOpss! ReCaptcha is probably preventing the code from running.")
 			print('Will wait a minute and then try again')
-			timer(60)
+			timer(60*20)
 			print('Will try again\n')
 
 
