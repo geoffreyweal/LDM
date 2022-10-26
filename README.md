@@ -2,12 +2,37 @@
 
 This program is designed to help you to data mine the literature. There are several components to this tutorial
 
+Part 1:
 1. Installation of VirtualBox and downloading virtual machine containing the LDM Program
 2. Using VirtualBox and opening the Virtual Machine
 3. Setting up the LDM program
+
+Part 2:
 4. Running the LDM program
 
-If you are attending a tutorial based on learning literature data mining, make sure you have done steps 1 and 2 before attending.
+**If you are attending a tutorial based on learning literature data mining, make sure you have done everything in part 1 before the tutorial session.**
+
+# Table of Contents
+
+<!--ts-->
+   * [Installation](#installation)
+   * [Usage](#usage)
+      * [STDIN](#stdin)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+      * [Auto insert and update TOC](#auto-insert-and-update-toc)
+      * [GitHub token](#github-token)
+      * [TOC generation with Github Actions](#toc-generation-with-github-actions)
+   * [Tests](#tests)
+   * [Dependency](#dependency)
+   * [Docker](#docker)
+     * [Local](#local)
+     * [Public](#public)
+<!--te-->
+
+# PART 1: Setting up VirtualBox and the LDM Program
 
 ## 1. Installation
 
@@ -178,8 +203,9 @@ If you ever see this error, do the following:
 
 Once the virtual machine has restarted, you will now be able to access the shared folder, which will be important for this exercise.
 
+# PART 2: Running the Literature Data Mining (LDM) Program
 
-## 4. Running the Literature Data Mining (LDM) Program
+## 4. Running the LDM program in the Virtual Machine
 
 
 
