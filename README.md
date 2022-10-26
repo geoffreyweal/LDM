@@ -25,9 +25,9 @@ Download this virtual machine by downloading the contents from this OneDrive lin
 
 ## 2. Using VirtualBox and opening the Virtual Machine
 
-### 2.1: Turning on the LDM Virtual Machine
+### 2.1: Adding the LDM Virtual Machine to your VirtualBox
 
-First, we will turn on the LDM virtual machine:
+First, we will add the LDM virtual machine to your VirtualBox:
 
 1. Open the VirtualBox program.
 2. Click the green + icon called add.
@@ -42,7 +42,29 @@ First, we will turn on the LDM virtual machine:
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Open_Virtual_Machine_original.png">
 </p>
 
-4. You will see that the LDM virtual machine is now available on your VirtualBox. Click on the LDM virtual machine and then click the green --> icon called show.
+You have now added the LDM virtual machine to your VirtualBox. You will see the LDM in your VirtualBox list of virtual machines.
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Open_Virtual_Machine_1_original.png">
+</p>
+
+### 2.2: Setting Up the Shared Folder 
+
+We will now set up a folder on your computer that we will be working in. This folder will allow us to add data to the virtual machine, manipulate data, and copy data and pdf files from the LDM program.
+
+1. 
+
+
+
+
+
+
+
+
+
+### 2.3: Starting Up the LDM Virtual Machine
+
+We will now turn on the LDM Virtual Machine. Click on the LDM virtual machine and then click the green  <kbd>Right</kbd> icon called show.
 
 <p align="center">
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Start_LDM_Virtual_Machine.png">
@@ -54,6 +76,6 @@ A new window contains the LDM virtual machine will now begin. This will look lik
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Started_VM.png">
 </p>
 
-### 2.1: Turning on the LDM Virtual Machine
+
 
 
