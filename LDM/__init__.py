@@ -4,7 +4,8 @@ __name__    = 'LDM'
 __version__ = '0.5'
 __author__  = 'Dr. Geoffrey Weal, Dr. Chayanit Wechwithayakhlung, Dr. Michael Price, Dr. Daniel Packwood, Dr. Paul Hume, Prof. Justin Hodgkiss'
 
-import sys, importlib
+import sys
+import importlib.util
 
 if sys.version_info[0] == 2:
 	toString = ''
