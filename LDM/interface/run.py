@@ -8,7 +8,7 @@ import os
 from LDM.LDM.LDM import LDM
 
 class CLICommand:
-	"""Will determine which EKMC jobs have completed and which ones have not.
+	"""Will run the literature mining task.
 	"""
 
 	@staticmethod
@@ -21,7 +21,7 @@ class CLICommand:
 
 def Run_method(time_between_250_cancels=60):
 	"""
-	This method will run execute the literature mining task.
+	This method will run the literature mining task.
 	"""
 
 	# First, get the current path
