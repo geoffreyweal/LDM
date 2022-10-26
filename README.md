@@ -104,13 +104,47 @@ A new window contains the LDM virtual machine will now begin. This will look lik
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Started_VM.png">
 </p>
 
+
+
 ## 3. Preparing the Literature Data Mining (LDM) Program and Shared Folder in LDM Virtual Machine.
 
 We now have set up the LDM Virtual Machine. We not need to prepare this virtual machine before we begin literature mining.
 
-### 3.1: Preparing the shared folder to access from the virtual machine
+### 3.1: Update the Literature Data Mining (LDM) Program
 
-To begin, we need to give our virtual machine the permissions to access the shared folder, otherwise we will see this error box displayed:
+Before beginning, we will update the LDM program. To do this, we will first open a terminal, where we will be doing all our work.
+
+1. Click on the Terminal icon. See the image below. This will open a new terminal.
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folder_VM_Fix.png">
+</p>
+
+2. In the terminal, type the following line and then press the `Enter` button: ``update_ldm``
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/update_ldm_1.png">
+</p>
+
+3. This will then update the LDM program, as well as any other programs that are needed. You will see code like this appear in the terminal:
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/update_ldm_2.png">
+</p>
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/update_ldm_3.png">
+</p>
+
+4. Once this has finished, you are all done. You can now quit the terminal by clicking the `x` button at the top right-hand corner of the terminal. See the images below:
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/update_ldm_exit.png">
+</p>
+
+### 3.2: Preparing the shared folder to access from the virtual machine
+
+Now, we need to give our virtual machine the permissions to access the shared folder, otherwise we will see this error box displayed:
 
 <p align="center">
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folder_VM_Error.png">
@@ -118,7 +152,7 @@ To begin, we need to give our virtual machine the permissions to access the shar
 
 If you ever see this error, do the following:
 
-1. Click on the Terminal icon. See the image below. This will open a terminal, where we will be doing all our work.
+1. Click on the Terminal icon. See the image below. This will open a new terminal.
 
 <p align="center">
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folder_VM_Fix.png">
