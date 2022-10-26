@@ -223,7 +223,7 @@ __license__ = 'GNU AFFERO GENERAL PUBLIC LICENSE'
 __url__ = 'https://github.com/geoffreyweal/LDM'
 __doc__ = 'See https://github.com/geoffreyweal/LDM for the documentation on this program'
 
-from LDM.Program.LDM import LDM
-__all__ = ['LDM']
+#from LDM.Program.LDM import LDM
+#__all__ = ['LDM']
 
 # ------------------------------------------------------------------------------------------------------------------------
