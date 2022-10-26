@@ -179,5 +179,11 @@ If you ever see this error, do the following:
 Once the virtual machine has restarted, you will now be able to access the shared folder, which will be important for this exercise.
 
 
+## 4. Running the Literature Data Mining (LDM) Program
+
+
+
+
+
 
 
