@@ -67,7 +67,7 @@ We will now set up a folder on your computer that we will be working in. This fo
 We will now turn on the LDM Virtual Machine. Click on the LDM virtual machine and then click the green  <kbd>Right</kbd> icon called show.
 
 <p align="center">
-	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Start_LDM_Virtual_Machine.png">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Start_LDM_Virtual_Machine_vertical.png">
 </p>
 
 A new window contains the LDM virtual machine will now begin. This will look like a computer is turning on. It is ready when the virtual machine looks like below:
