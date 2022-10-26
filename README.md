@@ -26,7 +26,7 @@ This program is designed to help you to data mine the literature. There are seve
       * [3. Preparing the Literature Data Mining (LDM) Program and Shared Folder in LDM Virtual Machine](#3-preparing-the-literature-data-mining-ldm-program-and-shared-folder-in-ldm-virtual-machine)
          * [3.1: Update the Literature Data Mining (LDM) Program](#31-update-the-literature-data-mining-ldm-program)
          * [3.2: Preparing the shared folder to access from the virtual machine](#32-preparing-the-shared-folder-to-access-from-the-virtual-machine)
-         
+
    * [Part 2: Running the Literature Data Mining (LDM) Program](#part-2-running-the-literature-data-mining-ldm-program)
       * [4. Running the LDM program in the Virtual Machine](#4-running-the-ldm-program-in-the-virtual-machine)
 <!--te-->
@@ -204,7 +204,7 @@ Once the virtual machine has restarted, you will now be able to access the share
 
 # Part 2: Running the Literature Data Mining (LDM) Program
 
-## 1. Running the LDM program in the Virtual Machine
+## 4. Running the LDM program in the Virtual Machine
 
 
 
