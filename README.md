@@ -104,6 +104,46 @@ A new window contains the LDM virtual machine will now begin. This will look lik
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Started_VM.png">
 </p>
 
+## 3. Preparing the Literature Data Mining (LDM) Program and Shared Folder in LDM Virtual Machine.
+
+We now have set up the LDM Virtual Machine. We not need to prepare this virtual machine before we begin literature mining.
+
+### 3.1: Preparing the shared folder to access from the virtual machine
+
+To begin, we need to give our virtual machine the permissions to access the shared folder, otherwise we will see this error box displayed:
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folder_VM_Error.png">
+</p>
+
+If you ever see this error, do the following:
+
+1. Click on the Terminal icon. See the image below. This will open a terminal, where we will be doing all our work.
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folder_VM_Fix.png">
+</p>
+
+2. In the terminal, type the following line and then press the `Enter` button: ``sudo adduser $USER vboxsf``
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folder_VM_Fix_2.png">
+</p>
+
+3. The terminal will ask to put the password for the virtual machine in. This is ``ldm``. Type this in and then press the `Enter` button. 
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folder_VM_Fix_3.png">
+</p>
+
+4. You will now see the following message. Now quit the terminal by clicking the `x` button at the top right-hand corner of the terminal, then restart the LDM virtual machine. See the images below:
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Restart_after_shared_VM.png">
+</p>
+
+Once the virtual machine has restarted, you will now be able to access the shared folder, which will be important for this exercise.
+
 
 
 
