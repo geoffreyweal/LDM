@@ -48,7 +48,12 @@ First, we will turn on the LDM virtual machine:
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Start_LDM_Virtual_Machine.png">
 </p>
 
+A new window contains the LDM virtual machine will now begin. This will look like a computer is turning on. It is ready when the virtual machine looks like below:
 
-The LDM virtual machine will now begin. This will look like a computer is turning on. It is ready when the virtual machine looks like below
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Started_VM.png">
+</p>
+
+
 
 
