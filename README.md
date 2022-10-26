@@ -54,6 +54,6 @@ A new window contains the LDM virtual machine will now begin. This will look lik
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Started_VM.png">
 </p>
 
-
+### 2.1: Turning on the LDM Virtual Machine
 
 
