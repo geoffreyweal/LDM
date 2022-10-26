@@ -42,7 +42,7 @@ def find_scripts():
   return sorted(scripts)
 
 setup(name='LDM',
-      packages=find_packages(root='LDM'), 
+      packages=[], #find_packages(root='LDM'), 
       scripts=['bin/LDM'],  #+find_scripts(),
       version=get_version_number(),
       description="This program is designed to simulate the dynamics of excitons in crystalline materials.",
