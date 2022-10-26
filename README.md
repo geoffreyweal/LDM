@@ -38,7 +38,16 @@ First, we will turn on the LDM virtual machine:
 
 3. Open the LDM.vbox file in VirtualBox.
 
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Open_Virtual_Machine_original.png">
+</p>
+
 4. You will see that the LDM virtual machine is now available on your VirtualBox. Click on the LDM virtual machine and then click the green --> icon called show.
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Start_LDM_Virtual_Machine.png">
+</p>
+
 
 The LDM virtual machine will now begin. This will look like a computer is turning on. It is ready when the virtual machine looks like below
 
