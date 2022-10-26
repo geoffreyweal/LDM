@@ -52,7 +52,11 @@ You have now added the LDM virtual machine to your VirtualBox. You will see the 
 
 We will now set up a folder on your computer that we will be working in. This folder will allow us to add data to the virtual machine, manipulate data, and copy data and pdf files from the LDM program.
 
-1. 
+1. Click on the LDM virtual machine and then click the orange :low_brightness: icon called settings.
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Open_Settings.png">
+</p>
 
 
 
@@ -64,7 +68,7 @@ We will now set up a folder on your computer that we will be working in. This fo
 
 ### 2.3: Starting Up the LDM Virtual Machine
 
-We will now turn on the LDM Virtual Machine. Click on the LDM virtual machine and then click the green  <kbd>Right</kbd> icon called show.
+We will now turn on the LDM Virtual Machine. Click on the LDM virtual machine and then click the green &rarr icon called show.
 
 <p align="center">
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Start_LDM_Virtual_Machine_vertical.png">
