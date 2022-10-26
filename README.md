@@ -1,6 +1,6 @@
 # Literature Data Mining (LDM): A Guide for Automatically Downloading and Highlighting Literature on Mass
 
-This program is designed to help you to data mine the literature. There are several components to this tutorial
+This program is designed to help you to data mine the literature. There are several components to this tutorial.
 
 **Part 1**
 * Installation of VirtualBox and downloading virtual machine containing the LDM Program
@@ -9,6 +9,8 @@ This program is designed to help you to data mine the literature. There are seve
 
 **Part 2**
 * Running the LDM program in the Virtual Machine
+
+This program will attempt to download PDFs from there journal website, which many of them will go through paywalls. It is recommended to use this program at your university or workplace so that there is no issue with downloading article pdfs from journal websites. Otherwise, if you are offsite, this program may work if you use a university or workplace VPN. Make sure you have started the VPN before loading the LDM virtual machine. 
 
 **If you are attending a tutorial based on learning literature data mining, make sure you have done everything in part 1 before the tutorial session.**
 
@@ -201,6 +203,8 @@ If you ever see this error, do the following:
 </p>
 
 Once the virtual machine has restarted, you will now be able to access the shared folder, which will be important for this exercise.
+
+
 
 # Part 2: Running the Literature Data Mining (LDM) Program
 
