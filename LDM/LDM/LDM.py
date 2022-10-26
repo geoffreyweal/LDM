@@ -15,11 +15,18 @@ import os, shutil
 from time import sleep
 from tqdm import tqdm
 
-#from LDM.Programs.search_internet   import get_number_of_results_from_google_scholar, scrap_google_scholar_for_literature
-from LDM.LDM.search_internet   import get_number_of_results_from_tewaharoa, scrap_tewaharoa_for_literature
-from LDM.LDM.download_pdf      import download_pdf
-from LDM.LDM.highlight_pdf     import highlight_pdf
-from LDM.LDM.auxiliary_methods import wait, timer
+try:
+	#from search_internet   import get_number_of_results_from_google_scholar, scrap_google_scholar_for_literature
+	from search_internet   import get_number_of_results_from_tewaharoa, scrap_tewaharoa_for_literature
+	from download_pdf      import download_pdf
+	from highlight_pdf     import highlight_pdf
+	from auxiliary_methods import wait, timer
+except:
+	#from LDM.Programs.search_internet   import get_number_of_results_from_google_scholar, scrap_google_scholar_for_literature
+	from LDM.LDM.search_internet   import get_number_of_results_from_tewaharoa, scrap_tewaharoa_for_literature
+	from LDM.LDM.download_pdf      import download_pdf
+	from LDM.LDM.highlight_pdf     import highlight_pdf
+	from LDM.LDM.auxiliary_methods import wait, timer
 
 def LDM(searches, search_type='Google Scholar'):
 	"""
