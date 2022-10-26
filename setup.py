@@ -54,7 +54,7 @@ setup(name='LDM',
       license='GNU AFFERO GENERAL PUBLIC LICENSE',
       zip_safe=False,
       keywords = ['victoria-university', 'victoria-university-of-wellington', 'university-of-wellington', 'wellington-university', 'literature', 'data-mining', 'literature-mining'],
-      install_requires=['setuptools', 'numpy', 'scipy', 'packaging', 'tqdm', 'bs4', 'selenium', 'webdriver_manager', 'fitz', 'xlsxwriter'],
+      install_requires=['setuptools', 'numpy', 'scipy', 'packaging', 'tqdm', 'bs4', 'selenium', 'webdriver_manager', 'fitz', 'frontend', 'xlsxwriter'],
       classifiers=[
         'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
         'Intended Audience :: Science/Research',      # Define that your audience are developers
