@@ -5,11 +5,7 @@ This program is designed to search google scholar for literature.
 """
 
 from bs4 import BeautifulSoup
-
-try:
-	from LDM.Programs.auxiliary_methods import wait, short_wait, get_source_data_from_firefox
-except:
-	from auxiliary_methods import wait, short_wait, get_source_data_from_firefox
+from LDM.Programs.auxiliary_methods import wait, short_wait, get_source_data_from_firefox
 
 def get_number_of_results_from_tewaharoa(sentence):
 	"""
