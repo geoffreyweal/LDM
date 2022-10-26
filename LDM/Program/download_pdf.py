@@ -14,9 +14,6 @@ This program uses the `ScrapPaper` program that were originally developed by M. 
 import os
 from time import sleep, time
 
-import requests
-from urllib.parse import urlparse
-
 from selenium.webdriver import Chrome, ChromeOptions
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.alert import Alert
