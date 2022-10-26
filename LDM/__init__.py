@@ -179,20 +179,20 @@ if not webdriver_manager_found:
 
 # ------------------------------------------------------------------------------------------------------------------------
 
-fitz_spec = importlib.util.find_spec("fitz")
-fitz_found = (fitz_spec is not None)
-if not fitz_found:
+pymupdf_spec = importlib.util.find_spec("pymupdf")
+pymupdf_found = (pymupdf_spec is not None)
+if not pymupdf_found:
 	toString = ''
 	toString += '\n'
 	toString += '================================================'+'\n'
 	toString += 'This is the LDM Program'+'\n'
 	toString += 'Version: '+str(__version__)+'\n'
 	toString += '\n'
-	toString += 'The LDM program requires the "fitz" program..'+'\n'
+	toString += 'The LDM program requires the "pymupdf" program..'+'\n'
 	toString += '\n'
 	toString += 'Install scipy by typing the following into your terminal:\n'
 	toString += '\n'
-	toString += 'pip3 install --user --upgrade fitz\n'
+	toString += 'pip3 install --user --upgrade pymupdf\n'
 	toString += '\n'
 	toString += 'This program will exit before beginning'+'\n'
 	toString += '================================================'+'\n'
