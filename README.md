@@ -14,14 +14,21 @@ Part 2:
 
 # Table of Contents
 
-
 <!--ts-->
-	* [PART 1: Setting up VirtualBox and the LDM Program](#part-1-setting-up-virtualbox-and-the-ldm-program)
-		* [1. Installation](#1-installation)
-			* [1.1: Install VirtualBox](#11-install-virtualbox)
-			* [1.2: Download the LDM Virtual Machine](#12-download-the-ldm-virtual-machine)
+   * [PART 1: Setting up VirtualBox and the LDM Program](#part-1-setting-up-virtualbox-and-the-ldm-program)
+      * [1. Installation](#1-installation)
+         * [1.1: Install VirtualBox](#11-install-virtualbox)
+         * [1.2: Download the LDM Virtual Machine](#12-download-the-ldm-virtual-machine)
+      * [2. Using VirtualBox and opening the Virtual Machine](#2-using-virtualbox-and-opening-the-virtual-machine)
+         * [2.1: Adding the LDM Virtual Machine to your VirtualBox](#21-adding-the-ldm-virtual-machine-to-your-virtualbox)
+         * [2.2: Setting Up the Shared Folder](#22-setting-up-the-shared-folder)
+         * [2.3: Starting Up the LDM Virtual Machine](#23-starting-up-the-ldm-virtual-machine)
+      * [3. Preparing the Literature Data Mining (LDM) Program and Shared Folder in LDM Virtual Machine](#3-preparing-the-literature-data-mining-ldm-program-and-shared-folder-in-ldm-virtual-machine)
+         * [3.1: Update the Literature Data Mining (LDM) Program](#31-update-the-literature-data-mining-ldm-program)
+         * [3.2: Preparing the shared folder to access from the virtual machine](#32-preparing-the-shared-folder-to-access-from-the-virtual-machine)
+   * [PART 2: Running the Literature Data Mining (LDM) Program](#part-2-running-the-literature-data-mining-ldm-program)
+      * [4. Running the LDM program in the Virtual Machine](#4-running-the-ldm-program-in-the-virtual-machine)
 <!--te-->
-
 
 # PART 1: Setting up VirtualBox and the LDM Program
 
