@@ -204,6 +204,10 @@ Once the virtual machine has restarted, you will now be able to access the share
 
 # Part 2: Running the Literature Data Mining (LDM) Program
 
+## 4. Create a Project Folder in the Shared Folder
+
+
+
 ## 4. Running the LDM program in the Virtual Machine
 
 
