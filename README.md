@@ -2,13 +2,13 @@
 
 This program is designed to help you to data mine the literature. There are several components to this tutorial
 
-Part 1:
-1. Installation of VirtualBox and downloading virtual machine containing the LDM Program
-2. Using VirtualBox and opening the Virtual Machine
-3. Setting up the LDM program
+**Part 1**
+* Installation of VirtualBox and downloading virtual machine containing the LDM Program
+* Using VirtualBox and opening the Virtual Machine
+* Preparing the Literature Data Mining (LDM) Program and Shared Folder in LDM Virtual Machine
 
-Part 2:
-4. Running the LDM program
+**Part 2**
+* Running the LDM program in the Virtual Machine
 
 **If you are attending a tutorial based on learning literature data mining, make sure you have done everything in part 1 before the tutorial session.**
 
@@ -203,7 +203,7 @@ Once the virtual machine has restarted, you will now be able to access the share
 
 # PART 2: Running the Literature Data Mining (LDM) Program
 
-## 4. Running the LDM program in the Virtual Machine
+## 1. Running the LDM program in the Virtual Machine
 
 
 
