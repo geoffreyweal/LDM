@@ -14,23 +14,14 @@ Part 2:
 
 # Table of Contents
 
+
 <!--ts-->
-   * [Installation](#installation)
-   * [Usage](#usage)
-      * [STDIN](#stdin)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-      * [Auto insert and update TOC](#auto-insert-and-update-toc)
-      * [GitHub token](#github-token)
-      * [TOC generation with Github Actions](#toc-generation-with-github-actions)
-   * [Tests](#tests)
-   * [Dependency](#dependency)
-   * [Docker](#docker)
-     * [Local](#local)
-     * [Public](#public)
+	* [PART 1: Setting up VirtualBox and the LDM Program](#part-1-setting-up-virtualbox-and-the-ldm-program)
+		* [1. Installation](#1-installation)
+			* [1.1: Install VirtualBox](#11-install-virtualbox)
+			* [1.2: Download the LDM Virtual Machine](#local-files)
 <!--te-->
+
 
 # PART 1: Setting up VirtualBox and the LDM Program
 
