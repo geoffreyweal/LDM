@@ -85,7 +85,7 @@ We will now set up a folder on your computer that we will be working in. This fo
 The shared folder between you computer and the LDM virtual machine has now been created. You can now press the `OK` button. 
 
 <p align="center">
-	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folders_4.png">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folders_4_2.png">
 </p>
 
 ### 2.3: Starting Up the LDM Virtual Machine
