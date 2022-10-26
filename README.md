@@ -52,19 +52,41 @@ You have now added the LDM virtual machine to your VirtualBox. You will see the 
 
 We will now set up a folder on your computer that we will be working in. This folder will allow us to add data to the virtual machine, manipulate data, and copy data and pdf files from the LDM program.
 
-1. Click on the LDM virtual machine and then click the orange :low_brightness: icon called settings.
+1. Click on the LDM virtual machine and then click the orange :low_brightness: icon called Settings.
 
 <p align="center">
 	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Open_Settings.png">
 </p>
 
+2. Click on the Shared Folders icon
 
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folders_1.png">
+</p>
 
+3. Click the folder button as shown below:
 
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folders_2.png">
+</p>
 
+4. Click the <kbd>Down</kbd> button, then click the Other... button
 
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folders_3.png">
+</p>
 
+5. Create a new folder on your computer where you want to obtain pdf files from. Here, I have created a folder called `LDM_Shared_Folder` on my computer. Then click `Open`.
 
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/shared_folder_original_3.png">
+</p>
+
+The shared folder between you computer and the LDM virtual machine has now been created. You can now press the `OK` button. 
+
+<p align="center">
+	<img src="https://github.com/geoffreyweal/LDM/blob/main/Images/Using_VirtualBox/Shared_Folders_4.png">
+</p>
 
 ### 2.3: Starting Up the LDM Virtual Machine
 
