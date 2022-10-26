@@ -19,7 +19,7 @@ Part 2:
 	* [PART 1: Setting up VirtualBox and the LDM Program](#part-1-setting-up-virtualbox-and-the-ldm-program)
 		* [1. Installation](#1-installation)
 			* [1.1: Install VirtualBox](#11-install-virtualbox)
-			* [1.2: Download the LDM Virtual Machine](#local-files)
+			* [1.2: Download the LDM Virtual Machine](#12-download-the-ldm-virtual-machine)
 <!--te-->
 
 
