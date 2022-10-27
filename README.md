@@ -208,13 +208,19 @@ Once the virtual machine has restarted, you will now be able to access the share
 
 # Part 2: Running the Literature Data Mining (LDM) Program
 
+In this part, we will go through the process of using the LDM program to data mine through the literature for relavant articles. 
+
+**If you are beginning a new search**, start at [4. Create a Project Folder in the Shared Folder](#4-running-the-ldm-program-in-the-virtual-machine)
+
+**If you are resuming a search**, go to 
+
+## 4. Working in the Shared Folder
+
+
+
 ## 4. Create a Project Folder in the Shared Folder
 
-
-Solution-processed organic photovoltaic cells based on a squaraine dye
-
-Solution-processed organic photovoltaic cells based on a squaraine dyeElectronic supplementary information (ESI) available. See DOI: 10.1039/c2cp42445b
-
+For all of these tutorials, we will be working in the cha
 
 ## 5. Running the LDM program in the Virtual Machine
 
