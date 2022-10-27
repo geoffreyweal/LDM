@@ -18,6 +18,7 @@ from selenium.webdriver import Chrome, ChromeOptions
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.alert import Alert
 
+max_filename_length = 100
 time_limit = 60.0
 def download_pdf(URL_address, file_name, path_loc, waiting_time=10):
 	"""
@@ -99,7 +100,9 @@ def download_pdf(URL_address, file_name, path_loc, waiting_time=10):
 				split_title.append('_')
 		split_title = ''.join(split_title)
 		split_title = [word for word in split_title.split('_') if (len(word) > 0)]
-		new_filename = '_'.join(split_title)+'.pdf'
+		new_filename = '_'.join(split_title)
+		new_filename = (new_filename[:max_filename_length-4]) if (len(new_filename) > (max_filename_length-4)) else new_filename
+		new_filename = new_filename+'.pdf'
 		os.rename(path_loc+'/'+original_filename, path_loc+'/'+new_filename)
 
 		# Seventh, return pdf filename

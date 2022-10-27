@@ -211,12 +211,18 @@ Once the virtual machine has restarted, you will now be able to access the share
 ## 4. Create a Project Folder in the Shared Folder
 
 
+Solution-processed organic photovoltaic cells based on a squaraine dye
 
-## 4. Running the LDM program in the Virtual Machine
-
-
-
+Solution-processed organic photovoltaic cells based on a squaraine dyeElectronic supplementary information (ESI) available. See DOI: 10.1039/c2cp42445b
 
 
+## 5. Running the LDM program in the Virtual Machine
+
+
+
+
+# Troubleshooting
+
+https://www.howtogeek.com/658047/how-to-fix-virtualboxs-%E2%80%9Ckernel-driver-not-installed-rc-1908-error/
 
 
